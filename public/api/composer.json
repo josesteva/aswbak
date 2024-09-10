@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.7"
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public/api"
+    },
+    "autoload": {
+        "psr-4": {
+            "lpdm\\api\\": "src/"
+        }
+    }
+}

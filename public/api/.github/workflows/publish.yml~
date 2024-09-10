@@ -1,0 +1,30 @@
+# LPDM
+# API
+# Publicar la API en el servidor
+
+# Código adaptado de: https://github.com/marketplace/actions/deploy-to-hostinger
+
+name: Publicar la API en el servidor
+on:
+  push:
+    branches:
+      - master # The branch name your are commit the new changes
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build and Push
+    steps:
+      - name: git-checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          dev: no
+      - name: push-to-server
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: master # The branch name where you want to push the assets
+          FOLDER: api # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message

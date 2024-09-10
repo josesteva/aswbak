@@ -1,0 +1,46 @@
+{
+  "id": 1,
+  "name": "ASW",
+  "slogan": "Arquitectura del Sitio Web",
+  "license": "MIT",
+  "version": "0.1",
+  "email": "alma@lospastelesdemama.com",
+  "pages": [
+    {
+      "icon": "home",
+      "label": "Inicio",
+      "module" : "Inicio",
+      "route": "/",
+      "filter": {},
+      "offset": 0,
+      "item": false
+    },{
+      "icon": "file",
+      "label": "Manual",
+      "module" : "Manual",
+      "route": "/",
+      "filter": {},
+      "offset": 0,
+      "item": true
+    },{
+      "icon": "command",
+      "label": "Servicio",
+      "module" : "Pagina",
+      "route": "/pagina",
+      "filter": {},
+      "offset": 0,
+      "item": false
+    },{
+      "icon": "user",
+      "label": "Registro",
+      "module" : "Registro",
+      "route": "/registro",
+      "filter": {},
+      "offset": 0,
+      "item": true,
+      "aside": true
+    }
+  ],
+   "currentPage": {},
+   "currentWidth": 0
+}
